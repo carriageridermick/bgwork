@@ -1,0 +1,212 @@
+// -- - Variables - --
+$defaultgray: #eaeaea70
+$lightergray: #e8e8e8
+$extrahighlight: #c9c9c9
+$highlight: #c0c0c0
+
+@media (max-width: 1400px)
+    body
+        padding:
+            left: 0% !important
+            right: 0% !important
+    .header
+        display: grid
+        font-size: 1rem
+        grid:
+            template-columns: 1fr
+            template-rows: repeat(3, auto)
+            template-areas: "a" "b" "c"
+        padding: 0.5vh
+        filter: drop-shadow(0 0 0.75rem black)
+        background-color: #3b3b3b
+        overflow: auto
+
+// -- - Base - --
+*
+    box-sizing: border-box
+    margin: 0px
+    padding: 0px
+    font-family: 'Oswald', sans-serif
+    color: $lightergray
+\::-webkit-scrollbar
+    background-color: #3b3b3b
+    box-shadow: (-0.2rem) 0px 0.75rem rgba(0, 0, 0, 0.568)
+    width: 0.8vw
+\::-webkit-scrollbar-thumb
+    background: #2b2b2b
+    border-radius: 10px
+html
+    min-height: 100%
+    background: linear-gradient(#e6d5d5, #828282)
+    body
+        min-height: 100vh
+        padding:
+            left: 17.5%
+            right: 17.5%
+.loadanim
+    height: 50px
+
+a
+    text-decoration: underline
+section
+    border: darken($defaultgray, 10) 4px solid
+        radius: 5px
+    background-color: $defaultgray
+    b, p
+        font-size: 1.2rem
+    .decor
+        display: grid
+        justify-content: center
+        justify-items: center
+        align-content: center
+        align-items: center
+        height: 20px
+        background:
+            image: url(../img/lines.png)
+            position: center
+            repeat: no-repeat
+            size: 125% 100%
+article
+    border-radius: 5px
+    padding: 5px
+img
+    max-width: 100%
+hr
+    border: #8b8b8b 1px solid
+    margin-top: 10px
+    margin-bottom: 10px
+
+// -- - Utilities - --
+.-lb
+    border-left: 3px solid black
+.-pd
+    padding: 7px
+.small
+    font-size: 1rem
+.right
+    text-align: right
+.offtopiclink
+    text-decoration: underline
+.shadow
+    filter: drop-shadow(0 0 0.75rem black)
+.clickable
+    cursor: pointer
+.zoomable
+    cursor: zoom-in
+.flexaligner
+    display: flex
+    align-items: center
+    justify-content: center
+.fullimg
+    min-width: 100%
+    padding: 2px
+    margin: 5px
+.centerall
+    display: grid
+    justify-content: center
+    align-content: center
+    justify-items: center
+    align-items: center
+    text-align: center
+.center
+    text-align: center
+.upper
+    display: grid
+    justify-content: start
+    align-content: start
+    justify-items: start
+    align-items: start
+// -- - Grid Areas - --
+.a
+    grid-area: a
+.b
+    grid-area: b
+.c
+    grid-area: c
+.d
+    grid-area: d
+.e
+    grid-area: e
+.f
+    grid-area: f
+.g
+    grid-area: g
+.h
+    grid-area: h
+.i
+    grid-area: i
+.j
+    grid-area: j
+.k
+    grid-area: k
+.debug
+    color: black
+    font-size: 1.5rem
+    margin: 20px
+// -- - Header - --
+header
+    display: grid
+    font-size: 1rem
+    grid:
+        template-columns: auto 1fr auto
+        template-rows: auto
+        template-areas: "a b c"
+    margin: 5vh 3vw 3vw 3vw
+    padding: 0.5vh
+    filter: drop-shadow(0 0 0.75rem black)
+    background-color: #a05959
+    overflow: auto
+    .title
+        grid-area: a
+        margin:
+            left: 10px
+            right: 10px
+        display: flex
+        text-align: center
+        align-items: center
+        justify-items: center
+        color: $extrahighlight
+    .navbar
+        grid-area: b
+        display: flex
+        align-content: center
+        justify-content: left
+        flex-wrap: wrap
+        font-size: 1rem
+        .button
+            margin: 10px
+            transition: 0.2s
+            .link
+                position: relative
+                bottom: 0
+                color: $extrahighlight
+                transition: bottom 0.1s
+            .current
+                text-decoration: none
+                color: darken($extrahighlight, 15)
+        .button:hover 
+            .link
+                bottom: 0.1vw
+            .current
+                bottom: 0
+.lastupdated
+    grid-area: c
+    display: flex
+    align-items: center
+    justify-content: center
+    margin-right: 10px
+
+// -- - Footer - --
+footer
+    margin:
+        top: 25px
+        bottom: 5vh
+    text-align: center
+    color: $defaultgray
+    overflow: auto
+.footerlinks
+    color: $defaultgray
+.icon
+    font-size: 2rem
+    margin: 5px
+

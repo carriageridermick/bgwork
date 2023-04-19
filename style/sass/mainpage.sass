@@ -1,0 +1,88 @@
+// -- - Variables - --
+$defaultgray: #3b3b3bca
+$lightergray: #7b7b7b
+$extrahighlight: #c9c9c9
+$highlight: #b0b0b0
+    
+// -- - Base - --
+.holder
+    margin:
+        top: 50px
+        left: 10vw
+        right: 10vw
+    overflow: auto
+.holdergrid
+    display: grid
+    grid-template:
+        columns: 3fr 1fr
+        rows: auto
+        areas: "a b"
+.other
+    display: grid
+    grid-template:
+        columns: 1fr 1fr
+        rows: repeat(5, auto)
+        areas: "a a" "b b" "c d" "c d" "e e"
+    gap: 5px 5px
+    margin:
+        right: 5px
+.new
+    display: grid
+    grid-template:
+        columns: 1fr
+        rows: auto auto 1fr auto
+        areas: "a" "b" "c" "d"
+    gap: 5px 0
+    margin:
+        left: 5px
+    a
+        display: grid
+        align-items: center
+        justify-items: center
+        text-decoration: none
+        hr
+            width: 85%
+            border-color: #202020
+        .div
+            margin: 5%
+        article
+            display: grid
+            grid-template-columns: 1fr
+            grid-template-rows: auto auto
+            margin: 5%
+            border-color: #1c1c1c
+            .img
+                height: 150px
+                width: 100%
+                border: 5px #4c4c4c solid
+                    radius: 5px
+                background:
+                    image: url(../img/blogs/atc1/articon1.png)
+                    position: center
+                    repeat: no-repeat
+                    size: cover
+@media (max-width: 1300px)
+    .holdergrid
+        display: grid
+        grid-template:
+            columns: 1fr
+            rows: auto auto
+            areas: "a" "b"
+    .new
+        margin:
+            left: 0
+            top: 5px
+    .other
+        margin:
+            right: 0
+            bottom: 5px
+@media (max-width: 700px)
+    .other
+        display: grid
+        grid-template:
+            columns: 1fr
+            rows: repeat(5, auto)
+            areas: "a" "b" "c" "d" "e"
+        gap: 5px 5px
+        margin:
+            right: 5px

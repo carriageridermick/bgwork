@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/mainpage.css">
+    <link rel="stylesheet" href="style/mainstyle.css">
+    <link rel="stylesheet" href="style/post.css">
+    <link rel="stylesheet" href="style/smallposts.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
+    <link rel="icon" href="cntnt/brain.png">
+    <title>Post</title>
+</head>
+<body>
+    <header>
+        <div class="title"><h1>Tinklalapio pavyzdys</h1></div>
+        <nav class="navbar">
+            <div class="button"><a class="link" href="main.html">Pagrindinis Puslapis</a></div>
+            <div class="button"><a class="link current">Įkelti</a></div>
+        </nav>
+        <div class="lastupdated">
+            <p id="lastupdated">Baigiamasis darbas (JS 21/1v M.Gaižauskas)</p>
+        </div>
+    </header>
+    <div class="holder holdergrid shadow">
+        <section class="forms">
+            <h2 class="a">Ruošti komentarą</h2>
+            <p class="b">Prašome įrašyti tekstą į šias eilutes, ir užbaigus, norint išsiųsti komentarą, spauskite 'Siųsti'!</p>
+            <form class="formgrid">
+                <hr>
+                <input class="datext" type="text" class="name" placeholder="Vardas...">
+                <input class="damail" type="email" class="mail" placeholder="vardenis.pav@email.com">
+                <br>
+                <textarea class="dabigtext" rows="2" placeholder="Jūsų tekstas..."></textarea>
+                <div class="centerall"><button type="button" class="subby" onclick="readsandwroots();">Siųsti</button></div>
+                <div class="centerall nope"></div>
+            </form>
+        </section>
+        <section class="b new loaderthingnew centerall">
+            <h2 class="a center">- Kas naujo? -</h2>
+            <div class="smolputter">
+                <div class="b center loadingthing"><img class="loadanim" src="cntnt/ld.gif"></div>
+            </div>
+        </section>
+    </div>
+    <footer>
+        <p>2023 | El. paštas: mykolas.gaizauskas@stud.kitm.lt</p>
+        <i class="icon fa-brands fa-tumblr"></i>
+    </footer>
+    <button class='debug' onclick="remove()">TESTAS: Pašalinti visą info</button>
+</div>
+</body>
+<script src="https://kit.fontawesome.com/a948121bf6.js" crossorigin="anonymous"></script>
+<script type="text/javascript" src="emailchk.js"></script>
+<script type="text/javascript" src="handler.js"></script>
+</html>
